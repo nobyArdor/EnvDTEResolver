@@ -4,11 +4,10 @@ using Microsoft.VisualStudio.TextTemplating;
 
 namespace EnvDTEResolver
 {
-    
-    public class Processor : DirectiveProcessor, IDirectiveProcessor
+    public abstract class ProcessorBase : DirectiveProcessor, IDirectiveProcessor
     {
         private const string DirectiveName = "EnvDTEResolve";
-        private Version _vsVersion;
+
         public override bool IsDirectiveSupported(string directiveName)
         {
             return string.Compare(directiveName, DirectiveName, StringComparison.OrdinalIgnoreCase) == 0;
@@ -37,17 +36,7 @@ namespace EnvDTEResolver
             return string.Empty;
         }
 
-
-        public override string[] GetReferencesForProcessingRun()
-        {
-            if (_vsVersion.Major > 16)
-                return Array.Empty<string>();
-
-            return new[]
-            {
-                "EnvDTE"
-            };
-        }
+        bool IDirectiveProcessor.RequiresProcessingRunIsHostSpecific => true;
 
         public override string[] GetImportsForProcessingRun()
         {
@@ -57,16 +46,17 @@ namespace EnvDTEResolver
             };
         }
 
-
-        public override void Initialize(ITextTemplatingEngineHost host)
+        protected string[] AssemblyVs2017()
         {
-            
-            var assemblyName = host.GetType().Assembly.FullName;
-            var parts = assemblyName.Split(new []{','}, StringSplitOptions.RemoveEmptyEntries);
-            var version = parts.Length < 2 ? null : parts[1].Trim();
-            _vsVersion = Version.Parse(version.Replace("Version=", string.Empty));
-            
+            return new[]
+            {
+                "EnvDTE"
+            };
         }
-        //bool IDirectiveProcessor.RequiresProcessingRunIsHostSpecific => true;
+
+        protected string[] AssemblyVs2022()
+        {
+            return Array.Empty<string>();
+        }
     }
 }

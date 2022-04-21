@@ -9,6 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnvDTEResolver19", "EnvDTER
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnvDTEResolver22", "EnvDTEResolver22\EnvDTEResolver22.csproj", "{5124915A-1756-4C61-8881-09DB04C8FFA4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{686785D3-D00C-44D5-B634-1B93876881D3}"
+	ProjectSection(SolutionItems) = preProject
+		Icon.PNG = Icon.PNG
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		SharedCode\SharedCode.projitems*{5124915a-1756-4c61-8881-09db04c8ffa4}*SharedItemsImports = 4
