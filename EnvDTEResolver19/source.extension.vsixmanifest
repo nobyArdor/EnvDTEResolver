@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+	<Metadata>
+		<Identity Id="EnvDTEResolver19.3ca23600-f671-4e3d-8b32-e66116e42b97" Version="1.0" Language="en-US" Publisher="gorbunov" />
+		<DisplayName>EnvDTEResolverVS2019</DisplayName>
+		<Description xml:space="preserve">Custom directive processor Text Templating For VS 2017 and VS 2019.
+Add EnvDTE to assembly for VS 2017 and VS 2022 and skip this for VS 2022
+Usage replace &lt;#@ assembly name="EnvDTE" #&gt; with &lt;#@ EnvDTEResolve Processor="EnvDteDirectiveProcessor" #&gt;
+</Description>
+		<License>LICENSE.txt</License>
+		<GettingStartedGuide>README.md</GettingStartedGuide>
+		<ReleaseNotes>Initial commit</ReleaseNotes>
+		<Icon>Icon.PNG</Icon>
+		<PreviewImage>Icon.PNG</PreviewImage>
+		<Tags>T4;TT;TemplatesText; Texttemplating</Tags>
+	</Metadata>
+	<Installation>
+		<InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
+		<InstallationTarget Version="[17.0,)" Id="Microsoft.VisualStudio.Community">
+			<ProductArchitecture>amd64</ProductArchitecture>
+		</InstallationTarget>
+	</Installation>
+	<Dependencies>
+		<Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+	</Dependencies>
+	<Assets>
+		<Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+	</Assets>
+	<Prerequisites>
+		<Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,)" DisplayName="Visual Studio core editor" />
+	</Prerequisites>
+</PackageManifest>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="EnvDTEResolver22.990513f3-4db1-4cba-9241-210c99e91ee7" Version="1.0" Language="en-US" Publisher="gorbunov" />
+        <DisplayName>EnvDTEResolver22</DisplayName>
+        <Description xml:space="preserve">Custom directive processor of text templating (*.tt) for VS 2022.
+Add EnvDTE to assembly for VS 2017 and VS 2022 and skip this for VS 2022</Description>
+        <License>LICENSE.txt</License>
+        <ReleaseNotes>Initial commit</ReleaseNotes>
+        <Icon>Icon.PNG</Icon>
+        <PreviewImage>Icon.PNG</PreviewImage>
+        <Tags>T4;TT;TemplatesText; Texttemplating</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, )">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
+</PackageManifest>
