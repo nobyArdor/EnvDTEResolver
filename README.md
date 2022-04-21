@@ -1,4 +1,5 @@
 <div id="top"></div>
+
 ## Motivation
 
 Visual studio (VS) 2022 then execute Text Template (*.tt) not need link assembly EnvDTE to have access to Visual Studio interop. In same time previous Visual studio 2019 and above need this assembly directive. It make use Text Templates more complicate in teams with different VS version and require have two version of each TT file depend on EnvDTE.
