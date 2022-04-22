@@ -4,9 +4,8 @@
         <Identity Id="EnvDTEResolver19.3ca23600-f671-4e3d-8b32-e66116e42b97" Version="1.0" Language="en-US" Publisher="gorbunov" />
         <DisplayName>EnvDTEResolverVS2019</DisplayName>
         <Description xml:space="preserve">Custom directive processor Text Templating For VS 2017 and VS 2019.
-Add EnvDTE to assembly for VS 2017 and VS 2022 and skip this for VS 2022
-Usage replace &lt;#@ assembly name="EnvDTE" #&gt; with &lt;#@ EnvDTEResolve Processor="EnvDteDirectiveProcessor" #&gt;
-</Description>
+Add EnvDTE to assembly for VS 2017 and VS 2022 and skip this for VS 2022</Description>
+        <MoreInfo>https://github.com/nobyArdor/EnvDTEResolver</MoreInfo>
         <License>LICENSE.txt</License>
         <GettingStartedGuide>README.md</GettingStartedGuide>
         <ReleaseNotes>Initial commit</ReleaseNotes>

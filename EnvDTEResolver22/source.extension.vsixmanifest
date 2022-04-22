@@ -5,6 +5,7 @@
         <DisplayName>EnvDTEResolver22</DisplayName>
         <Description xml:space="preserve">Custom directive processor of text templating (*.tt) for VS 2022.
 Add EnvDTE to assembly for VS 2017 and VS 2022 and skip this for VS 2022</Description>
+        <MoreInfo>https://github.com/nobyArdor/EnvDTEResolver</MoreInfo>
         <GettingStartedGuide>README.md</GettingStartedGuide>
         <ReleaseNotes>Initial commit</ReleaseNotes>
         <Icon>Icon.PNG</Icon>
